@@ -5,13 +5,41 @@
     <title>Eat-da-burger</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/assets/css/burger_style.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/burger_style.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 
 <body>
     {{{ body }}}
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="/public/assets/js/script.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".devour-form").on("submit", function (event) {
+                event.preventDefault();
+                var burger_id = $(this).children(".burger_id").val();
+                console.log(burger_id);
+                $.ajax({
+                    method: "PUT",
+                    url: "/burgers/" + burger_id
+                }).then(function (data) {
+                    location.reload()
+                });
+            });
+
+            $("#text-enter-button").on("click", function (event) {
+                event.preventDefault();
+                var burger_name = $("#enter_text").val();
+                console.log(burger_name)
+                $.ajax({
+                    method: "POST",
+                    url: "/burgers/create",
+                    data: { burger_name }
+                }).then(function (data) {
+                    location.reload();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

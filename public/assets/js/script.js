@@ -5,7 +5,7 @@ $(document).ready(function () {
         console.log(burger_id);
         $.ajax({
             method: "PUT",
-            url: "/burger/" + burger_id
+            url: "/burgers/" + burger_id
         }).then(function (data) {
             location.reload()
         });

@@ -1,7 +1,7 @@
 body {
     width: 95%;
     height: 900px;
-    background-image: url(/public/assets/img/friesburgerwallpaper.jpg);
+    background-image: url("/assets/img/friesburgerwallpaper.jpg");
     background-repeat: repeat
   }
   
