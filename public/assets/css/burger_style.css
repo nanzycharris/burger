@@ -1,12 +1,32 @@
 body {
     width: 95%;
-    height: 900px;
+    height: 100%;
+    opacity: 100%;
     background-image: url("/assets/img/friesburgerwallpaper.jpg");
     background-repeat: repeat
   }
   
+  #burgericon {
+    border: wheat 5px solid;
+    background-color: rgb(250, 241, 225);
+    width: 150px;
+    height: 130px;
+    margin-top: -5px;
+    float: center;
+    margin-bottom: 15px;
+  }
+ 
+  .wrapper {
+    margin-top: 23px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: rgb(243, 220, 9);
+    border:  wheat 5px solid;
+  }
+
   #top-bar {
     margin-top: 28px;
+    margin-bottom: 15px;
   }
   
   .spacing-reset {
@@ -46,7 +66,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     margin: auto;
-    font-size: 38px;
+    font-size: 24px;
   }
   
   .task {
@@ -59,12 +79,40 @@ body {
     padding-bottom: 20px;
   }
   
+  .btn-default {
+    background-color: rgb(245, 69, 16);
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .devour-form{
+    margin-left: 130px;
+    margin-top: -50px;
+  }
+  
+  pre {
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 50px;
+  }
+
   #text-enter-button {
     margin-top: 10px;
     margin-bottom: 18px;
+    background-color: tomato;
+    border:white solid 2px;
+    font-size: 16px;
+    font-weight: 600;
   }
   
   h1 {
     color: #f30;
+    font-weight: 650;
+    margin-bottom: 15px;
   }
   
